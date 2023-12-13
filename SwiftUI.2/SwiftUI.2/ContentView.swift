@@ -21,10 +21,14 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
+                ColorView(redColor: redSliderValue,
+                          greenColor: greenSliderValue,
+                          blueColor: blueSliderValue)
+                Spacer()
                 ColorSlider(sliderValue: $redSliderValue, color: .red)
                 ColorSlider(sliderValue: $greenSliderValue, color: .green)
                 ColorSlider(sliderValue: $blueSliderValue, color: .blue)
-                
+                Spacer()
             }.padding()
         }
     }

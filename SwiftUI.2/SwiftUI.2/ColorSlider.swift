@@ -22,7 +22,7 @@ struct ColorSlider: View {
                 .tint(color)
                 .frame(width: 250)
             
-            TextField("SV", text: $sliderValue.toString)
+            TextField("0", text: $sliderValue.toString)
                 .textFieldStyle(.roundedBorder)
                 .foregroundStyle(.black)
                 .frame(width: 50)
