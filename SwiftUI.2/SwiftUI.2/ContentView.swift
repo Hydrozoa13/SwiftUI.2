@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var sliderValue: Double = 100.0
+    @State private var selection: CGColor = CGColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color(selection)
+                .ignoresSafeArea()
+            
+            VStack {
+                ColorSlider(sliderValue: $sliderValue, color: .white)
+                
+            }.padding()
         }
-        .padding()
     }
 }
 
